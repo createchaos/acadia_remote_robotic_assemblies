@@ -1,0 +1,54 @@
+
+MODULE user (SYSMODULE)
+
+ ! Predefined user data
+ !*********************
+
+ ! Declaration of numeric registers reg1...reg5
+ VAR num reg1 := 0;
+ VAR num reg2 := 0;
+ VAR num reg3 := 0;
+ VAR num reg4 := 0;
+ VAR num reg5 := 0;
+
+ ! Declaration of stopwatch clock1
+ VAR clock clock1;
+
+ PERS wobjdata wobj_base_r1; 
+ PERS wobjdata wobj_base_r2; 
+ PERS wobjdata wobj_base_r3; 
+ PERS wobjdata wobj_base_r4;
+ 
+ ! Template for declaration of workobject wobj1
+ !TASK PERS wobjdata wobj1 := [FALSE, TRUE, "", [[0, 0, 0],[1, 0, 0, 0]],[[0, 0, 0],[1, 0, 0, 0]]];
+
+ PERS tooldata gripit_mas_dj_transformed := [TRUE,[[-0.42956, 0.79834, 369.39046] , [0.99994, -0.01011, -0.00336, -0.00371]],[2,[100,0,0],[1,0,0,0],0,0,0]];
+ PERS tooldata mas_magazine_measured_sp := [TRUE, [[5.06960, -375.15424, 264.98156] , [-0.00262, -0.00928, 0.71304, -0.70106]], [35,[0,150,-300],[1,0,0,0],0,0,0]];
+ TASK PERS tooldata measuringtip_zw:=[TRUE,[[0.751756,2.63207,66.3888],[1,0,0,0]],[0.3,[0,0,30],[1,0,0,0],0,0,0]];
+ TASK PERS wobjdata wobj1:=[FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
+ TASK PERS tooldata measuringtip_zw_r1_02:=[TRUE,[[3.38102,0.607002,66.1302],[1,0,0,0]],[0.3,[0,0,10],[1,0,0,0],0,0,0]];
+ TASK PERS wobjdata wobj_zw_r1_01:=[FALSE,TRUE,"",[[3124.01,1285.45,-298.083],[0.702875,-0.000967849,-0.000760977,0.711312]],[[0,0,0],[1,0,0,0]]];
+ TASK PERS tooldata foam_cut_6in_1_JHe:=[TRUE,[[74.0931,1.49077,421.621],[0.0735865,0.00675946,-0.997253,-0.00517302]],[1,[0,0,200],[1,0,0,0],0,0,0]];
+ TASK PERS tooldata foam_cut_6in_new_JHe:=[TRUE,[[74.0931,1.49077,421.621],[0.997253,0.005173,0.073586,0.006759]],[1,[0,0,200],[1,0,0,0],0,0,0]];
+ TASK PERS tooldata hotknife_8in_ZZ:=[TRUE,[[95.3662,-6.75758,468.409],[0.104263,-0.00153774,-0.993953,-0.0344018]],[1,[0,0,100],[1,0,0,0],0,0,0]];
+ TASK PERS tooldata hotknife_8in_ZZ_adj:=[TRUE,[[95.3662,-6.75758,468.409],[0.993953,0.034402,0.104263,-0.001538]],[1,[0,0,100],[1,0,0,0],0,0,0]];
+ TASK PERS tooldata tip_r1_cg_01:=[TRUE,[[3.47459,1.41733,66.2439],[1,0,0,0]],[0.3,[0,0,20],[1,0,0,0],0,0,0]];
+ TASK PERS tooldata tip_r1_cg_02:=[TRUE,[[2.85519,1.92634,66.9944],[1,0,0,0]],[0.3,[0,0,20],[1,0,0,0],0,0,0]];
+ TASK PERS wobjdata coordinatesystem_r1_cg_01:=[FALSE,TRUE,"",[[2994.81,1257.06,-299.288],[0.718897,0.000439165,-0.000732116,0.695116]],[[0,0,0],[1,0,0,0]]];
+ TASK PERS wobjdata coordinatesystem_r1_cg_02:=[FALSE,TRUE,"",[[2990.98,1179.39,-300.462],[0.720233,0.000701986,-0.000183716,0.693732]],[[0,0,0],[1,0,0,0]]];
+ TASK PERS tooldata tip_r1_cg_03:=[TRUE,[[3.24484,0.677909,67.1621],[1,0,0,0]],[0.2,[0,0,0.2],[1,0,0,0],0,0,0]];
+ TASK PERS wobjdata cosys_r1_cg_01:=[FALSE,TRUE,"",[[3103.94,1287.23,-300.42],[0.702058,0.000763285,-0.000763285,0.712119]],[[0,0,0],[1,0,0,0]]];
+ TASK PERS wobjdata wobj2:=[FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
+ TASK PERS wobjdata cosys_r1_cg_02:=[FALSE,TRUE,"",[[3110.71,1286.87,-314.753],[0.701165,-8.28023E-05,-0.00240531,0.712995]],[[0,0,0],[1,0,0,0]]];
+ TASK PERS wobjdata cosys_r1_cg_03_average:=[FALSE,TRUE,"",[[3108.64,1285.9,-314.852],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
+ TASK PERS wobjdata rotrobwob_r1_01:=[FALSE,TRUE,"",[[2161.76,1369.29,84.5992],[0.706553,0.00140155,0.00071067,0.707659]],[[0,0,0],[1,0,0,0]]];
+ TASK PERS wobjdata rotrobwob_r1_02:=[FALSE,TRUE,"",[[2159.76,1366.29,84.5992],[0.706553,0.00140155,0.00071067,0.707659]],[[0,0,0],[1,0,0,0]]];
+ TASK PERS wobjdata rotrobwob_r1_CG_03:=[FALSE,TRUE,"",[[2161.53,1368.47,84.6794],[0.707034,0.0011347,0.000816139,0.707178]],[[0,0,0],[1,0,0,0]]];
+ TASK PERS wobjdata rotrobwob_r1_CG_04:=[FALSE,TRUE,"",[[2159.76, 1364.29, 84.5992], [0.707787, 0.001403, 0.000708, 0.706424]],[[0,0,0],[1,0,0,0]]];
+ TASK PERS tooldata tool1test1:=[TRUE,[[0,0,0],[1,0,0,0]],[-1,[0,0,0],[1,0,0,0],0,0,0]];
+ TASK PERS tooldata Vault04A_1_IXH:=[TRUE,[[0.8608,-0.264024,343.717],[0.0105468,-0.00302873,-0.999937,-0.002275]],[3,[0,0,150],[1,0,0,0],0,0,0]];
+ TASK PERS tooldata Vault04A_2_IXH:=[TRUE,[[1.98011,-0.489094,343.431],[0.0247857,0.708253,-0.705289,-0.0181852]],[3,[0,0,150],[1,0,0,0],0,0,0]];
+ TASK PERS tooldata Vault04A_3V_IXH:=[TRUE,[[0,0,247],[1,0,0,0]],[55,[0,0,150],[1,0,0,0],0,0,0]];
+ TASK PERS tooldata ECL_gripper_EB:=[TRUE,[[0,0,400],[1,0,0,0]],[55,[0,0,150],[1,0,0,0],0,0,0]];
+ TASK PERS wobjdata wobj_ECL_rob1:=[FALSE,TRUE,"",[[2159.76, 1364.29, 84.5992], [0.707787, 0.001403, 0.000708, 0.706424]],[[0,0,0],[1,0,0,0]]];
+ENDMODULE
