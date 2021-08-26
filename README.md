@@ -1,10 +1,10 @@
-# Workshop: Robotic Fabrication with COMPAS FAB
+# Workshop: Remote Robotic Assemblies
 
-## Princeton University
+## ACADIA 2021
 
-> 28-30 June + 2 July 2021
+> 11-12 September, 2021
 
-![Flyer](images/flyer.png)
+![Flyer](images/flyer.jpg)
 
 ## Overview
 
@@ -237,17 +237,17 @@ First time using `conda`? Make sure you run this at least once:
 
 Clone this repository and create a new conda environment:
 
-    (base) cd path/to/workshop_princeton_2021
+    (base) cd path/to/workshop_acadia_2021
     (base) conda env create -f environment.yml
-    (base) conda activate fab21
+    (base) conda activate acadia21
 
 <details><summary>Alternatively, create environment manually</summary>
 <p>
 
 The conda environment can also be manually created:
 
-    (base) conda create -n fab21 python=3.8 compas_fab>=0.19.1 --yes
-    (base) conda activate fab21
+    (base) conda create -n acadia21 python=3.8 compas_fab>=0.19.1 --yes
+    (base) conda activate acadia21
 
 </p>
 </details>
@@ -256,11 +256,11 @@ The conda environment can also be manually created:
 
 Also install `python.app` after activating the environment:
 
-    (fab21) conda install python.app
+    (acadia21) conda install python.app
 
 ### Verify installation
 
-    (fab21) python -m compas
+    (acadia21) python -m compas
 
     Yay! COMPAS is installed correctly!
 
@@ -270,11 +270,11 @@ Also install `python.app` after activating the environment:
 
 ### Install on Rhino
 
-    (fab21) python -m compas_rhino.install
-    (fab21) python -m compas_rhino.install -v 7.0
+    (acadia21) python -m compas_rhino.install
+    (acadia21) python -m compas_rhino.install -v 7.0
 
 ### Update installation
 
 To update your environment:
 
-    (fab21) conda env update -f environment.yml
+    (acadia21) conda env update -f environment.yml
