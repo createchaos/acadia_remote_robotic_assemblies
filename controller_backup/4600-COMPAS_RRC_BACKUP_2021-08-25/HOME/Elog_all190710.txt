@@ -1,0 +1,137 @@
+All event log messages.
+Date:	2019-07-10 02:28:56
+System Name:	4600-503200
+Controller Name:	
+Controller ID :	4600-503199
+
+RobotWare: 6.06.00.00
+Key:	 - 
+Options:	
+	RobotWare Base
+	English
+	709-1 DeviceNet Master/Slave
+	841-1 EtherNet/IP Scanner/Adapter
+	687-1 Advanced Robot Motion
+	604-1 MultiMove Coordinated
+	608-1 World Zones
+	610-1 Independent Axis
+	611-1 Path Recovery
+	612-1 Path Offset
+	885-1 SoftMove
+	613-1 Collision Detection
+	614-1 FTP and NFS client
+	616-1 PC Interface
+	617-1 FlexPendant Interface
+	623-1 Multitasking
+	628-1 Sensor Interface
+
+DriveModule1
+Key:	 - 
+Options:	
+	Axis Calibration
+	IRB 4600-40/2.55 Type C
+	Drive System IRB 460/640/660/760/4600/66xx/6700
+	ADU-790A in position X3
+
+DriveModule2
+Key:	 - 
+Options:	
+	Axis Calibration
+	IRB 4600-40/2.55 Type C
+	Drive System IRB 460/640/660/760/4600/66xx/6700
+	ADU-790A in position X3
+
+TrackMotion
+	Key:	 - 
+Options:	
+	Track Motion x004 Base
+		Track Motion x004 Base
+			IRBT 4004 Type A 3.9 m
+				Standard carriage In line
+					IRBT 4004 Type A 3.9 m
+						Standard carriage In line
+
+Common log messages
+SeqNo     	Type	Category            	Code    	Title                                   	Date                	Description	Arguments
+1         	I   	Operational         	10046   	System reset                            	2019-07-10 02:15:13 	Loading the original system installation settings.	{args: }
+2         	W   	Motion              	50465   	Tuning of robot stiffness parameters is recommended	2019-07-10 02:15:22 	No tuned system parameters for 'Motion Process Mode' on robot ROB_1 found.	{args: "ROB_1", "Mounting Stiffness"}
+3         	W   	Motion              	50465   	Tuning of robot stiffness parameters is recommended	2019-07-10 02:15:22 	No tuned system parameters for 'Motion Process Mode' on robot ROB_2 found.	{args: "ROB_2", "Mounting Stiffness"}
+4         	I   	Operational         	10056   	System shutdown initiated               	2019-07-10 02:15:22 	System shutdown is now initiated and steps are taken to stop activities and store the current state for the next startup.	{args: }
+5         	I   	Operational         	10045   	System restarted                        	2019-07-10 02:15:44 	System was restarted.	{args: }
+6         	W   	Motion              	50465   	Tuning of robot stiffness parameters is recommended	2019-07-10 02:15:57 	No tuned system parameters for 'Motion Process Mode' on robot ROB_1 found.	{args: "ROB_1", "Mounting Stiffness"}
+7         	W   	Motion              	50465   	Tuning of robot stiffness parameters is recommended	2019-07-10 02:15:57 	No tuned system parameters for 'Motion Process Mode' on robot ROB_2 found.	{args: "ROB_2", "Mounting Stiffness"}
+8         	E   	Motion              	50242   	Unsync due to CFG data                  	2019-07-10 02:15:58 	- Mismatch between controller and cfg data for joint track1 (calibration offset or calibration position), or- Valid flags for calibration offset or commutation offset not true in cfg.	{args: "track1"}
+9         	E   	Motion              	50242   	Unsync due to CFG data                  	2019-07-10 02:15:59 	- Mismatch between controller and cfg data for joint track2 (calibration offset or calibration position), or- Valid flags for calibration offset or commutation offset not true in cfg.	{args: "track2"}
+10        	I   	Operational         	10002   	Program pointer has been reset          	2019-07-10 02:16:21 	The program pointer of task T_ROB1 has been reset.	{args: "1", "0", "T_ROB1"}
+11        	I   	Operational         	10002   	Program pointer has been reset          	2019-07-10 02:16:21 	The program pointer of task T_ROB2 has been reset.	{args: "2", "0", "T_ROB2"}
+12        	E   	System              	20031   	Axis not calibrated.                    	2019-07-10 02:16:23 	One or several absolute/relative measurement axes are not calibrated.	{args: }
+13        	I   	Operational         	10035   	Axis not calibrated                     	2019-07-10 02:16:23 	After checking, the system has found that one or more manipulator axes are not calibrated.	{args: }
+14        	I   	Operational         	10012   	Safety guard stop state                 	2019-07-10 02:16:23 	The system is in the Guard stop state. It enters this state either after switching from Automatic mode to Manual, or after the Motors ON circuit has been opened by an Emergency Stop, General Stop, Automatic Stop or Superior Stop, or in manual mode if enabling device was released.	{args: }
+15        	I   	Operational         	10015   	Manual mode selected                    	2019-07-10 02:16:23 	The system is in the Manual mode.	{args: }
+16        	I   	Operational         	10150   	Program started                         	2019-07-10 02:16:23 	Execution of task T_ROB1 has been started from the first instruction of the task's entry routine. The originator could not be determined.	{args: "1", "T_ROB1"}
+17        	I   	Operational         	10150   	Program started                         	2019-07-10 02:16:23 	Execution of task T_ROB2 has been started from the first instruction of the task's entry routine. The originator could not be determined.	{args: "2", "T_ROB2"}
+18        	I   	Operational         	10002   	Program pointer has been reset          	2019-07-10 02:16:23 	The program pointer of task T_ROB1 has been reset.	{args: "1", "0", "T_ROB1"}
+19        	I   	Operational         	10002   	Program pointer has been reset          	2019-07-10 02:16:23 	The program pointer of task T_ROB2 has been reset.	{args: "2", "0", "T_ROB2"}
+20        	I   	Operational         	10129   	Program stopped                         	2019-07-10 02:16:23 	The task T_ROB1 has stopped. The reason is that the event routine for RESET or POWER_ON is ready.	{args: "1", "T_ROB1"}
+21        	E   	Operational         	10106   	Service Message                         	2019-07-10 02:16:23 	It's time for service for robot ROB_1 because it is 870 days since the last service.	{args: "870", "ROB_1"}
+22        	E   	Operational         	10106   	Service Message                         	2019-07-10 02:16:23 	It's time for service for robot ROB_2 because it is 870 days since the last service.	{args: "870", "ROB_2"}
+23        	E   	Operational         	10106   	Service Message                         	2019-07-10 02:16:23 	It's time for service for robot track1 because it is 871 days since the last service.	{args: "871", "track1"}
+24        	E   	Operational         	10106   	Service Message                         	2019-07-10 02:16:23 	It's time for service for robot track2 because it is 871 days since the last service.	{args: "871", "track2"}
+25        	I   	Operational         	10129   	Program stopped                         	2019-07-10 02:16:23 	The task T_ROB2 has stopped. The reason is that the event routine for RESET or POWER_ON is ready.	{args: "2", "T_ROB2"}
+26        	I   	Operational         	10116   	Serial memory data are moved from controller memory to robot memory	2019-07-10 02:17:10 	Serial memory data are moved from controller memory to robot memory by Default User.	{args: "Default User"}
+27        	E   	Hardware            	38101   	SMB Communication Failure               	2019-07-10 02:18:56 	A transmission failure has been detected between the axis computer and the serial measurement board on measurement link 1 in drive module 1.	{args: "1", "1"}
+28        	I   	Operational         	10014   	System failure state                    	2019-07-10 02:18:56 	Execution of all NORMAL tasks has been stopped due to malfunction.	{args: }
+29        	E   	Hardware            	38101   	SMB Communication Failure               	2019-07-10 02:19:50 	A transmission failure has been detected between the axis computer and the serial measurement board on measurement link 1 in drive module 1.	{args: "1", "1"}
+30        	E   	Hardware            	38101   	SMB Communication Failure               	2019-07-10 02:19:51 	A transmission failure has been detected between the axis computer and the serial measurement board on measurement link 1 in drive module 1.	{args: "1", "1"}
+31        	E   	Hardware            	38101   	SMB Communication Failure               	2019-07-10 02:19:51 	A transmission failure has been detected between the axis computer and the serial measurement board on measurement link 1 in drive module 1.	{args: "1", "1"}
+32        	E   	Hardware            	38101   	SMB Communication Failure               	2019-07-10 02:20:01 	A transmission failure has been detected between the axis computer and the serial measurement board on measurement link 1 in drive module 1.	{args: "1", "1"}
+33        	E   	Hardware            	38101   	SMB Communication Failure               	2019-07-10 02:20:01 	A transmission failure has been detected between the axis computer and the serial measurement board on measurement link 1 in drive module 1.	{args: "1", "1"}
+34        	E   	Hardware            	38101   	SMB Communication Failure               	2019-07-10 02:20:01 	A transmission failure has been detected between the axis computer and the serial measurement board on measurement link 1 in drive module 1.	{args: "1", "1"}
+35        	E   	Hardware            	38101   	SMB Communication Failure               	2019-07-10 02:20:01 	A transmission failure has been detected between the axis computer and the serial measurement board on measurement link 1 in drive module 1.	{args: "1", "1"}
+
+Operational log messages
+SeqNo     	Type	Category            	Code    	Title                                   	Date                	Description	Arguments
+1         	I   	Operational         	10046   	System reset                            	2019-07-10 02:15:13 	Loading the original system installation settings.	{args: }
+4         	I   	Operational         	10056   	System shutdown initiated               	2019-07-10 02:15:22 	System shutdown is now initiated and steps are taken to stop activities and store the current state for the next startup.	{args: }
+5         	I   	Operational         	10045   	System restarted                        	2019-07-10 02:15:44 	System was restarted.	{args: }
+10        	I   	Operational         	10002   	Program pointer has been reset          	2019-07-10 02:16:21 	The program pointer of task T_ROB1 has been reset.	{args: "1", "0", "T_ROB1"}
+11        	I   	Operational         	10002   	Program pointer has been reset          	2019-07-10 02:16:21 	The program pointer of task T_ROB2 has been reset.	{args: "2", "0", "T_ROB2"}
+13        	I   	Operational         	10035   	Axis not calibrated                     	2019-07-10 02:16:23 	After checking, the system has found that one or more manipulator axes are not calibrated.	{args: }
+14        	I   	Operational         	10012   	Safety guard stop state                 	2019-07-10 02:16:23 	The system is in the Guard stop state. It enters this state either after switching from Automatic mode to Manual, or after the Motors ON circuit has been opened by an Emergency Stop, General Stop, Automatic Stop or Superior Stop, or in manual mode if enabling device was released.	{args: }
+15        	I   	Operational         	10015   	Manual mode selected                    	2019-07-10 02:16:23 	The system is in the Manual mode.	{args: }
+16        	I   	Operational         	10150   	Program started                         	2019-07-10 02:16:23 	Execution of task T_ROB1 has been started from the first instruction of the task's entry routine. The originator could not be determined.	{args: "1", "T_ROB1"}
+17        	I   	Operational         	10150   	Program started                         	2019-07-10 02:16:23 	Execution of task T_ROB2 has been started from the first instruction of the task's entry routine. The originator could not be determined.	{args: "2", "T_ROB2"}
+18        	I   	Operational         	10002   	Program pointer has been reset          	2019-07-10 02:16:23 	The program pointer of task T_ROB1 has been reset.	{args: "1", "0", "T_ROB1"}
+19        	I   	Operational         	10002   	Program pointer has been reset          	2019-07-10 02:16:23 	The program pointer of task T_ROB2 has been reset.	{args: "2", "0", "T_ROB2"}
+20        	I   	Operational         	10129   	Program stopped                         	2019-07-10 02:16:23 	The task T_ROB1 has stopped. The reason is that the event routine for RESET or POWER_ON is ready.	{args: "1", "T_ROB1"}
+21        	E   	Operational         	10106   	Service Message                         	2019-07-10 02:16:23 	It's time for service for robot ROB_1 because it is 870 days since the last service.	{args: "870", "ROB_1"}
+22        	E   	Operational         	10106   	Service Message                         	2019-07-10 02:16:23 	It's time for service for robot ROB_2 because it is 870 days since the last service.	{args: "870", "ROB_2"}
+23        	E   	Operational         	10106   	Service Message                         	2019-07-10 02:16:23 	It's time for service for robot track1 because it is 871 days since the last service.	{args: "871", "track1"}
+24        	E   	Operational         	10106   	Service Message                         	2019-07-10 02:16:23 	It's time for service for robot track2 because it is 871 days since the last service.	{args: "871", "track2"}
+25        	I   	Operational         	10129   	Program stopped                         	2019-07-10 02:16:23 	The task T_ROB2 has stopped. The reason is that the event routine for RESET or POWER_ON is ready.	{args: "2", "T_ROB2"}
+26        	I   	Operational         	10116   	Serial memory data are moved from controller memory to robot memory	2019-07-10 02:17:10 	Serial memory data are moved from controller memory to robot memory by Default User.	{args: "Default User"}
+28        	I   	Operational         	10014   	System failure state                    	2019-07-10 02:18:56 	Execution of all NORMAL tasks has been stopped due to malfunction.	{args: }
+
+System log messages
+SeqNo     	Type	Category            	Code    	Title                                   	Date                	Description	Arguments
+12        	E   	System              	20031   	Axis not calibrated.                    	2019-07-10 02:16:23 	One or several absolute/relative measurement axes are not calibrated.	{args: }
+
+Hardware log messages
+SeqNo     	Type	Category            	Code    	Title                                   	Date                	Description	Arguments
+27        	E   	Hardware            	38101   	SMB Communication Failure               	2019-07-10 02:18:56 	A transmission failure has been detected between the axis computer and the serial measurement board on measurement link 1 in drive module 1.	{args: "1", "1"}
+29        	E   	Hardware            	38101   	SMB Communication Failure               	2019-07-10 02:19:50 	A transmission failure has been detected between the axis computer and the serial measurement board on measurement link 1 in drive module 1.	{args: "1", "1"}
+30        	E   	Hardware            	38101   	SMB Communication Failure               	2019-07-10 02:19:51 	A transmission failure has been detected between the axis computer and the serial measurement board on measurement link 1 in drive module 1.	{args: "1", "1"}
+31        	E   	Hardware            	38101   	SMB Communication Failure               	2019-07-10 02:19:51 	A transmission failure has been detected between the axis computer and the serial measurement board on measurement link 1 in drive module 1.	{args: "1", "1"}
+32        	E   	Hardware            	38101   	SMB Communication Failure               	2019-07-10 02:20:01 	A transmission failure has been detected between the axis computer and the serial measurement board on measurement link 1 in drive module 1.	{args: "1", "1"}
+33        	E   	Hardware            	38101   	SMB Communication Failure               	2019-07-10 02:20:01 	A transmission failure has been detected between the axis computer and the serial measurement board on measurement link 1 in drive module 1.	{args: "1", "1"}
+34        	E   	Hardware            	38101   	SMB Communication Failure               	2019-07-10 02:20:01 	A transmission failure has been detected between the axis computer and the serial measurement board on measurement link 1 in drive module 1.	{args: "1", "1"}
+35        	E   	Hardware            	38101   	SMB Communication Failure               	2019-07-10 02:20:01 	A transmission failure has been detected between the axis computer and the serial measurement board on measurement link 1 in drive module 1.	{args: "1", "1"}
+
+Motion log messages
+SeqNo     	Type	Category            	Code    	Title                                   	Date                	Description	Arguments
+2         	W   	Motion              	50465   	Tuning of robot stiffness parameters is recommended	2019-07-10 02:15:22 	No tuned system parameters for 'Motion Process Mode' on robot ROB_1 found.	{args: "ROB_1", "Mounting Stiffness"}
+3         	W   	Motion              	50465   	Tuning of robot stiffness parameters is recommended	2019-07-10 02:15:22 	No tuned system parameters for 'Motion Process Mode' on robot ROB_2 found.	{args: "ROB_2", "Mounting Stiffness"}
+6         	W   	Motion              	50465   	Tuning of robot stiffness parameters is recommended	2019-07-10 02:15:57 	No tuned system parameters for 'Motion Process Mode' on robot ROB_1 found.	{args: "ROB_1", "Mounting Stiffness"}
+7         	W   	Motion              	50465   	Tuning of robot stiffness parameters is recommended	2019-07-10 02:15:57 	No tuned system parameters for 'Motion Process Mode' on robot ROB_2 found.	{args: "ROB_2", "Mounting Stiffness"}
+8         	E   	Motion              	50242   	Unsync due to CFG data                  	2019-07-10 02:15:58 	- Mismatch between controller and cfg data for joint track1 (calibration offset or calibration position), or- Valid flags for calibration offset or commutation offset not true in cfg.	{args: "track1"}
+9         	E   	Motion              	50242   	Unsync due to CFG data                  	2019-07-10 02:15:59 	- Mismatch between controller and cfg data for joint track2 (calibration offset or calibration position), or- Valid flags for calibration offset or commutation offset not true in cfg.	{args: "track2"}
