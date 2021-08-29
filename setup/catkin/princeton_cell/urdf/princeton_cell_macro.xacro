@@ -5,21 +5,21 @@
 
     <link name="world" />
 
-    <joint name="A_world_joint" type="fixed">
+    <joint name="r2_world_joint" type="fixed">
       <parent link="world" />
-      <child link = "A_axis" />
+      <child link = "r2_axis" />
       <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
     </joint>
 
-    <xacro:abb_on_axis prefix="A_"/>
+    <xacro:abb_on_axis prefix="r2_" cart_yaw="${pi/2}"/>
 
-    <joint name="B_world_joint" type="fixed">
+    <joint name="r1_world_joint" type="fixed">
       <parent link="world" />
-      <child link = "B_axis" />
-      <origin rpy="0.0 0.0 3.14159" xyz="3.70 3.45 0.02"/>
+      <child link = "r1_axis" />
+      <origin rpy="0.0 0.0 0" xyz="0.0 3.45 0.02"/>
     </joint>
 
-    <xacro:abb_on_axis prefix="B_"/>
+    <xacro:abb_on_axis prefix="r1_" cart_yaw="${-pi/2}"/>
 
   </xacro:macro>
 </robot>

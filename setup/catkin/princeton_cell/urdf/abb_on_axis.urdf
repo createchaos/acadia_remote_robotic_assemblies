@@ -31,7 +31,7 @@
   <joint name="cart_joint" type="prismatic">
     <parent link="axis"/>
     <child link="cart"/>
-    <origin rpy="0 0 0 " xyz="0 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <axis xyz="1 0 0"/>
     <limit effort="100000" lower="0" upper="4.0" velocity="2.618"/>
     <dynamics damping="0.2" friction="0"/>
@@ -59,7 +59,7 @@
   <joint name="abb_joint" type="fixed">
     <parent link="cart"/>
     <child link="base_link"/>
-    <origin rpy="0 0 1.5707963267948966 " xyz="0 0 0 "/>
+    <origin rpy="0 0 0" xyz="0 0 0 "/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
   <!-- link list -->
@@ -267,4 +267,33 @@
     <parent link="base_link"/>
     <child link="base"/>
   </joint>
+  <!-- Create a fixed joint with a parameterized name. -->
+  <joint name="gripper_joint" type="fixed">
+    <!-- The parent link must be read from the robot model it is attached to. -->
+    <parent link="tool0"/>
+    <child link="gripper"/>
+    <!-- The tool is directly attached to the flange. -->
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+  <link name="gripper">
+    <visual>
+      <geometry>
+        <!-- The path to the visual meshes in the package. -->
+        <mesh filename="package://princeton_cell/meshes/visual/gripper.stl"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <!-- The path to the collision meshes in the package. -->
+        <mesh filename="package://princeton_cell/meshes/collision/gripper.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- TCP frame -->
+  <joint name="tcp_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.3"/>
+    <parent link="gripper"/>
+    <child link="tcp"/>
+  </joint>
+  <link name="tcp"/>
 </robot>

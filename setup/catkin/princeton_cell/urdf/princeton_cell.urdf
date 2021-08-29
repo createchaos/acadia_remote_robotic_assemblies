@@ -5,16 +5,16 @@
 <!-- =================================================================================== -->
 <robot name="princeton_cell">
   <link name="world"/>
-  <joint name="A_world_joint" type="fixed">
+  <joint name="r2_world_joint" type="fixed">
     <parent link="world"/>
-    <child link="A_axis"/>
+    <child link="r2_axis"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
   </joint>
   <!-- Conversion were obtained from http://www.e-paint.co.uk/Lab_values.asp
        unless otherwise stated. -->
   <!-- Conversion were obtained from http://www.e-paint.co.uk/Lab_values.asp
        unless otherwise stated. -->
-  <link name="A_axis">
+  <link name="r2_axis">
     <inertial>
       <origin xyz="0.0 0.0 0.0"/>
       <mass value="120"/>
@@ -34,15 +34,15 @@
       </geometry>
     </collision>
   </link>
-  <joint name="A_cart_joint" type="prismatic">
-    <parent link="A_axis"/>
-    <child link="A_cart"/>
-    <origin rpy="0 0 0 " xyz="0 0 0"/>
+  <joint name="r2_cart_joint" type="prismatic">
+    <parent link="r2_axis"/>
+    <child link="r2_cart"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <axis xyz="1 0 0"/>
     <limit effort="100000" lower="0" upper="4.0" velocity="2.618"/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
-  <link name="A_cart">
+  <link name="r2_cart">
     <inertial>
       <origin xyz="0.0 0.0 0.0"/>
       <mass value="120.00000"/>
@@ -62,14 +62,14 @@
       </geometry>
     </collision>
   </link>
-  <joint name="A_abb_joint" type="fixed">
-    <parent link="A_cart"/>
-    <child link="A_base_link"/>
-    <origin rpy="0 0 1.5707963267948966 " xyz="0 0 0 "/>
+  <joint name="r2_abb_joint" type="fixed">
+    <parent link="r2_cart"/>
+    <child link="r2_base_link"/>
+    <origin rpy="0 0 1.5707963267948966" xyz="0 0 0 "/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
   <!-- link list -->
-  <link name="A_base_link">
+  <link name="r2_base_link">
     <inertial>
       <origin xyz="0.0 0.0 0.0"/>
       <mass value="120.00000"/>
@@ -89,7 +89,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="A_link_1">
+  <link name="r2_link_1">
     <inertial>
       <origin xyz="0.18000 0.00000 0.50000"/>
       <mass value="120.00000"/>
@@ -109,7 +109,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="A_link_2">
+  <link name="r2_link_2">
     <inertial>
       <origin xyz="0.94000 0.08000 -0.34000"/>
       <mass value="120.00000"/>
@@ -129,7 +129,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="A_link_3">
+  <link name="r2_link_3">
     <inertial>
       <origin xyz="0.07000 -0.26600 0.08800"/>
       <mass value="120.00000"/>
@@ -149,7 +149,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="A_link_4">
+  <link name="r2_link_4">
     <inertial>
       <origin xyz="0.00000 0.00000 1.00000"/>
       <mass value="40.00000"/>
@@ -169,7 +169,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="A_link_5">
+  <link name="r2_link_5">
     <inertial>
       <origin xyz="0.14000 0.00000 0.00000"/>
       <mass value="10.00000"/>
@@ -189,7 +189,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="A_link_6">
+  <link name="r2_link_6">
     <inertial>
       <origin xyz="0.08100 -0.09100 0.33200"/>
       <mass value="5.00000"/>
@@ -209,79 +209,79 @@
       </geometry>
     </collision>
   </link>
-  <link name="A_tool0"/>
+  <link name="r2_tool0"/>
   <!-- end of link list -->
   <!-- joint list -->
-  <joint name="A_joint_1" type="revolute">
-    <parent link="A_base_link"/>
-    <child link="A_link_1"/>
+  <joint name="r2_joint_1" type="revolute">
+    <parent link="r2_base_link"/>
+    <child link="r2_link_1"/>
     <origin rpy="0 0 0 " xyz="0 0 0"/>
     <axis xyz="0 0 1"/>
     <limit effort="100000" lower="-3.14159" upper="3.14159" velocity="2.618"/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
-  <joint name="A_joint_2" type="revolute">
-    <parent link="A_link_1"/>
-    <child link="A_link_2"/>
+  <joint name="r2_joint_2" type="revolute">
+    <parent link="r2_link_1"/>
+    <child link="r2_link_2"/>
     <origin rpy="0 -0 0 " xyz="0.175 0 0.495"/>
     <axis xyz="0 1 0"/>
     <limit effort="100000" lower="-1.5708" upper="2.61799" velocity="2.618"/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
-  <joint name="A_joint_3" type="revolute">
-    <parent link="A_link_2"/>
-    <child link="A_link_3"/>
+  <joint name="r2_joint_3" type="revolute">
+    <parent link="r2_link_2"/>
+    <child link="r2_link_3"/>
     <origin rpy="0 -0 0 " xyz="0 0 1.095"/>
     <axis xyz="0 1 0"/>
     <limit effort="100000" lower="-3.14159" upper="1.309" velocity="2.618"/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
-  <joint name="A_joint_4" type="revolute">
-    <parent link="A_link_3"/>
-    <child link="A_link_4"/>
+  <joint name="r2_joint_4" type="revolute">
+    <parent link="r2_link_3"/>
+    <child link="r2_link_4"/>
     <origin rpy="0 -0 0 " xyz="0.332 0 0.175"/>
     <axis xyz="1 0 0"/>
     <limit effort="10000" lower="-6.98132" upper="6.98132" velocity="6.2832"/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
-  <joint name="A_joint_5" type="revolute">
-    <parent link="A_link_4"/>
-    <child link="A_link_5"/>
+  <joint name="r2_joint_5" type="revolute">
+    <parent link="r2_link_4"/>
+    <child link="r2_link_5"/>
     <origin rpy="0 -0 0 " xyz="0.939 0 0"/>
     <axis xyz="0 1 0"/>
     <limit effort="100000" lower="-2.18166" upper="2.0944" velocity="6.2832"/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
-  <joint name="A_joint_6" type="revolute">
-    <parent link="A_link_5"/>
-    <child link="A_link_6"/>
+  <joint name="r2_joint_6" type="revolute">
+    <parent link="r2_link_5"/>
+    <child link="r2_link_6"/>
     <origin rpy="0 1.57076 0 " xyz="0.135 0 0"/>
     <axis xyz="0 0 1"/>
     <limit effort="100000" lower="-6.98132" upper="6.98132" velocity="7.854"/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
-  <joint name="A_joint_6-tool0" type="fixed">
-    <parent link="A_link_6"/>
-    <child link="A_tool0"/>
+  <joint name="r2_joint_6-tool0" type="fixed">
+    <parent link="r2_link_6"/>
+    <child link="r2_tool0"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
   </joint>
   <!-- end of joint list -->
   <!-- ROS base_link to ABB World Coordinates transform -->
-  <link name="A_base"/>
-  <joint name="A_base_link-base" type="fixed">
+  <link name="r2_base"/>
+  <joint name="r2_base_link-base" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0"/>
-    <parent link="A_base_link"/>
-    <child link="A_base"/>
+    <parent link="r2_base_link"/>
+    <child link="r2_base"/>
   </joint>
   <!-- Create a fixed joint with a parameterized name. -->
-  <joint name="A_gripper_joint" type="fixed">
+  <joint name="r2_gripper_joint" type="fixed">
     <!-- The parent link must be read from the robot model it is attached to. -->
-    <parent link="A_tool0"/>
-    <child link="A_gripper"/>
+    <parent link="r2_tool0"/>
+    <child link="r2_gripper"/>
     <!-- The tool is directly attached to the flange. -->
     <origin rpy="0 0 0" xyz="0 0 0"/>
   </joint>
-  <link name="A_gripper">
+  <link name="r2_gripper">
     <visual>
       <geometry>
         <!-- The path to the visual meshes in the package. -->
@@ -296,22 +296,22 @@
     </collision>
   </link>
   <!-- TCP frame -->
-  <joint name="A_tcp_joint" type="fixed">
+  <joint name="r2_tcp_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0.3"/>
-    <parent link="A_gripper"/>
-    <child link="A_tcp"/>
+    <parent link="r2_gripper"/>
+    <child link="r2_tcp"/>
   </joint>
-  <link name="A_tcp"/>
-  <joint name="B_world_joint" type="fixed">
+  <link name="r2_tcp"/>
+  <joint name="r1_world_joint" type="fixed">
     <parent link="world"/>
-    <child link="B_axis"/>
-    <origin rpy="0.0 0.0 3.14159" xyz="3.70 3.45 0.02"/>
+    <child link="r1_axis"/>
+    <origin rpy="0.0 0.0 0" xyz="0.0 3.45 0.02"/>
   </joint>
   <!-- Conversion were obtained from http://www.e-paint.co.uk/Lab_values.asp
        unless otherwise stated. -->
   <!-- Conversion were obtained from http://www.e-paint.co.uk/Lab_values.asp
        unless otherwise stated. -->
-  <link name="B_axis">
+  <link name="r1_axis">
     <inertial>
       <origin xyz="0.0 0.0 0.0"/>
       <mass value="120"/>
@@ -331,15 +331,15 @@
       </geometry>
     </collision>
   </link>
-  <joint name="B_cart_joint" type="prismatic">
-    <parent link="B_axis"/>
-    <child link="B_cart"/>
-    <origin rpy="0 0 0 " xyz="0 0 0"/>
+  <joint name="r1_cart_joint" type="prismatic">
+    <parent link="r1_axis"/>
+    <child link="r1_cart"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <axis xyz="1 0 0"/>
     <limit effort="100000" lower="0" upper="4.0" velocity="2.618"/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
-  <link name="B_cart">
+  <link name="r1_cart">
     <inertial>
       <origin xyz="0.0 0.0 0.0"/>
       <mass value="120.00000"/>
@@ -359,14 +359,14 @@
       </geometry>
     </collision>
   </link>
-  <joint name="B_abb_joint" type="fixed">
-    <parent link="B_cart"/>
-    <child link="B_base_link"/>
-    <origin rpy="0 0 1.5707963267948966 " xyz="0 0 0 "/>
+  <joint name="r1_abb_joint" type="fixed">
+    <parent link="r1_cart"/>
+    <child link="r1_base_link"/>
+    <origin rpy="0 0 -1.5707963267948966" xyz="0 0 0 "/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
   <!-- link list -->
-  <link name="B_base_link">
+  <link name="r1_base_link">
     <inertial>
       <origin xyz="0.0 0.0 0.0"/>
       <mass value="120.00000"/>
@@ -386,7 +386,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="B_link_1">
+  <link name="r1_link_1">
     <inertial>
       <origin xyz="0.18000 0.00000 0.50000"/>
       <mass value="120.00000"/>
@@ -406,7 +406,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="B_link_2">
+  <link name="r1_link_2">
     <inertial>
       <origin xyz="0.94000 0.08000 -0.34000"/>
       <mass value="120.00000"/>
@@ -426,7 +426,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="B_link_3">
+  <link name="r1_link_3">
     <inertial>
       <origin xyz="0.07000 -0.26600 0.08800"/>
       <mass value="120.00000"/>
@@ -446,7 +446,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="B_link_4">
+  <link name="r1_link_4">
     <inertial>
       <origin xyz="0.00000 0.00000 1.00000"/>
       <mass value="40.00000"/>
@@ -466,7 +466,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="B_link_5">
+  <link name="r1_link_5">
     <inertial>
       <origin xyz="0.14000 0.00000 0.00000"/>
       <mass value="10.00000"/>
@@ -486,7 +486,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="B_link_6">
+  <link name="r1_link_6">
     <inertial>
       <origin xyz="0.08100 -0.09100 0.33200"/>
       <mass value="5.00000"/>
@@ -506,79 +506,79 @@
       </geometry>
     </collision>
   </link>
-  <link name="B_tool0"/>
+  <link name="r1_tool0"/>
   <!-- end of link list -->
   <!-- joint list -->
-  <joint name="B_joint_1" type="revolute">
-    <parent link="B_base_link"/>
-    <child link="B_link_1"/>
+  <joint name="r1_joint_1" type="revolute">
+    <parent link="r1_base_link"/>
+    <child link="r1_link_1"/>
     <origin rpy="0 0 0 " xyz="0 0 0"/>
     <axis xyz="0 0 1"/>
     <limit effort="100000" lower="-3.14159" upper="3.14159" velocity="2.618"/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
-  <joint name="B_joint_2" type="revolute">
-    <parent link="B_link_1"/>
-    <child link="B_link_2"/>
+  <joint name="r1_joint_2" type="revolute">
+    <parent link="r1_link_1"/>
+    <child link="r1_link_2"/>
     <origin rpy="0 -0 0 " xyz="0.175 0 0.495"/>
     <axis xyz="0 1 0"/>
     <limit effort="100000" lower="-1.5708" upper="2.61799" velocity="2.618"/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
-  <joint name="B_joint_3" type="revolute">
-    <parent link="B_link_2"/>
-    <child link="B_link_3"/>
+  <joint name="r1_joint_3" type="revolute">
+    <parent link="r1_link_2"/>
+    <child link="r1_link_3"/>
     <origin rpy="0 -0 0 " xyz="0 0 1.095"/>
     <axis xyz="0 1 0"/>
     <limit effort="100000" lower="-3.14159" upper="1.309" velocity="2.618"/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
-  <joint name="B_joint_4" type="revolute">
-    <parent link="B_link_3"/>
-    <child link="B_link_4"/>
+  <joint name="r1_joint_4" type="revolute">
+    <parent link="r1_link_3"/>
+    <child link="r1_link_4"/>
     <origin rpy="0 -0 0 " xyz="0.332 0 0.175"/>
     <axis xyz="1 0 0"/>
     <limit effort="10000" lower="-6.98132" upper="6.98132" velocity="6.2832"/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
-  <joint name="B_joint_5" type="revolute">
-    <parent link="B_link_4"/>
-    <child link="B_link_5"/>
+  <joint name="r1_joint_5" type="revolute">
+    <parent link="r1_link_4"/>
+    <child link="r1_link_5"/>
     <origin rpy="0 -0 0 " xyz="0.939 0 0"/>
     <axis xyz="0 1 0"/>
     <limit effort="100000" lower="-2.18166" upper="2.0944" velocity="6.2832"/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
-  <joint name="B_joint_6" type="revolute">
-    <parent link="B_link_5"/>
-    <child link="B_link_6"/>
+  <joint name="r1_joint_6" type="revolute">
+    <parent link="r1_link_5"/>
+    <child link="r1_link_6"/>
     <origin rpy="0 1.57076 0 " xyz="0.135 0 0"/>
     <axis xyz="0 0 1"/>
     <limit effort="100000" lower="-6.98132" upper="6.98132" velocity="7.854"/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
-  <joint name="B_joint_6-tool0" type="fixed">
-    <parent link="B_link_6"/>
-    <child link="B_tool0"/>
+  <joint name="r1_joint_6-tool0" type="fixed">
+    <parent link="r1_link_6"/>
+    <child link="r1_tool0"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
   </joint>
   <!-- end of joint list -->
   <!-- ROS base_link to ABB World Coordinates transform -->
-  <link name="B_base"/>
-  <joint name="B_base_link-base" type="fixed">
+  <link name="r1_base"/>
+  <joint name="r1_base_link-base" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0"/>
-    <parent link="B_base_link"/>
-    <child link="B_base"/>
+    <parent link="r1_base_link"/>
+    <child link="r1_base"/>
   </joint>
   <!-- Create a fixed joint with a parameterized name. -->
-  <joint name="B_gripper_joint" type="fixed">
+  <joint name="r1_gripper_joint" type="fixed">
     <!-- The parent link must be read from the robot model it is attached to. -->
-    <parent link="B_tool0"/>
-    <child link="B_gripper"/>
+    <parent link="r1_tool0"/>
+    <child link="r1_gripper"/>
     <!-- The tool is directly attached to the flange. -->
     <origin rpy="0 0 0" xyz="0 0 0"/>
   </joint>
-  <link name="B_gripper">
+  <link name="r1_gripper">
     <visual>
       <geometry>
         <!-- The path to the visual meshes in the package. -->
@@ -593,10 +593,10 @@
     </collision>
   </link>
   <!-- TCP frame -->
-  <joint name="B_tcp_joint" type="fixed">
+  <joint name="r1_tcp_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0.3"/>
-    <parent link="B_gripper"/>
-    <child link="B_tcp"/>
+    <parent link="r1_gripper"/>
+    <child link="r1_tcp"/>
   </joint>
-  <link name="B_tcp"/>
+  <link name="r1_tcp"/>
 </robot>
