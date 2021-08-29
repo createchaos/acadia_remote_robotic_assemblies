@@ -8,7 +8,7 @@
       <parent link="${connected_to}"/>
       <child link="${prefix}gripper"/>
       <!-- The tool is directly attached to the flange. -->
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
     </joint>
     <link name="${prefix}gripper">
       <visual>
@@ -27,7 +27,7 @@
 
     <!-- TCP frame -->
     <joint name="${prefix}tcp_joint" type="fixed">
-      <origin xyz="0 0 0.3" rpy="0 0 0"/>
+      <origin xyz="0 0 0.352" rpy="0 0 0"/>
       <parent link="${prefix}gripper"/>
       <child link="${prefix}tcp"/>
     </joint>
