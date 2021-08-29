@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
-  <xacro:macro name="full_cell">
-    <xacro:include filename="$(find princeton_cell)/urdf/abb_on_axis.xacro"/>
-<!-- =================================================================================== -->
+  <xacro:macro name="princeton_cell">
+    <xacro:include filename="$(find princeton_cell)/urdf/abb_on_axis_macro.xacro"/>
+
     <link name="world" />
 
     <joint name="A_world_joint" type="fixed">

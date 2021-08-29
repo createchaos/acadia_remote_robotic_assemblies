@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<robot name="full_cell" xmlns:xacro="http://wiki.ros.org/xacro">
-  <xacro:include filename="$(find princeton_cell)/urdf/full_cell_macro.xacro"/>
-  <xacro:full_cell />
-</robot>

@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
-  <xacro:macro name="princeton_cell" params="prefix">
+  <xacro:macro name="abb_on_axis" params="prefix">
     <xacro:include filename="$(find abb_resources)/urdf/common_materials.xacro"/>
     <xacro:include filename="$(find abb_irb4600_40_255)/urdf/abb_irb4600_40_255_macro.xacro"/>
     <xacro:include filename="$(find princeton_cell)/urdf/linear_axis.xacro"/>
+    <xacro:include filename="$(find princeton_cell)/urdf/gripper.xacro" />
 
     <xacro:linear_axis prefix="${prefix}"/>
 
@@ -15,6 +16,7 @@
     </joint>
 
     <xacro:abb_irb4600_40_255 prefix="${prefix}"/>
+    <xacro:gripper prefix="${prefix}" connected_to="${prefix}tool0"/>
 
   </xacro:macro>
 </robot>
