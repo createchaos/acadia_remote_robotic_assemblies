@@ -273,7 +273,7 @@
     <parent link="tool0"/>
     <child link="gripper"/>
     <!-- The tool is directly attached to the flange. -->
-    <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+    <origin rpy="0 0 -1.5707963267948966" xyz="0 0 0"/>
   </joint>
   <link name="gripper">
     <visual>
