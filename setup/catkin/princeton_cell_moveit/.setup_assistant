@@ -1,11 +1,11 @@
 moveit_setup_assistant_config:
   URDF:
     package: princeton_cell
-    relative_path: urdf/full_cell.urdf
+    relative_path: urdf/princeton_cell.urdf
     xacro_args: "--inorder "
   SRDF:
-    relative_path: config/full_cell.srdf
+    relative_path: config/princeton_cell.srdf
   CONFIG:
     author_name: Romana Rust
     author_email: rust@arch.ethz.ch
-    generated_timestamp: 1624982037
+    generated_timestamp: 1630270898
