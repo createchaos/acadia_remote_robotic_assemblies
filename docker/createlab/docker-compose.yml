@@ -13,7 +13,7 @@ services:
     command:
       - roslaunch
       - /root/catkin_ws/scripts/main.launch
-      - rrc:=false
+      - rrc:=true
       - gui:=true
     volumes:
       - ./scripts:/root/catkin_ws/scripts
