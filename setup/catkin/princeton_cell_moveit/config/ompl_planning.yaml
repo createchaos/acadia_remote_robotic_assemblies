@@ -121,7 +121,7 @@ planner_configs:
     dense_delta_fraction: 0.001  # delta fraction for interface detection. default: 0.001
     max_failures: 5000  # maximum consecutive failure limit. default: 5000
 robot1_axis:
-  default_planner_config: None
+  default_planner_config: RRTstar
   planner_configs:
     - SBL
     - EST
@@ -147,7 +147,7 @@ robot1_axis:
     - SPARS
     - SPARStwo
 robot1_axis_gripper:
-  default_planner_config: None
+  default_planner_config: RRTstar
   planner_configs:
     - SBL
     - EST
@@ -173,7 +173,7 @@ robot1_axis_gripper:
     - SPARS
     - SPARStwo
 robot1:
-  default_planner_config: None
+  default_planner_config: RRTstar
   planner_configs:
     - SBL
     - EST
@@ -201,7 +201,7 @@ robot1:
   projection_evaluator: joints(r1_joint_1,r1_joint_2)
   longest_valid_segment_fraction: 0.005
 robot1_gripper:
-  default_planner_config: None
+  default_planner_config: RRTstar
   planner_configs:
     - SBL
     - EST
@@ -229,7 +229,7 @@ robot1_gripper:
   projection_evaluator: joints(r1_joint_1,r1_joint_2)
   longest_valid_segment_fraction: 0.005
 robot2_axis:
-  default_planner_config: None
+  default_planner_config: RRTstar
   planner_configs:
     - SBL
     - EST
@@ -255,7 +255,7 @@ robot2_axis:
     - SPARS
     - SPARStwo
 robot2_axis_gripper:
-  default_planner_config: None
+  default_planner_config: RRTstar
   planner_configs:
     - SBL
     - EST
@@ -281,7 +281,7 @@ robot2_axis_gripper:
     - SPARS
     - SPARStwo
 robot2:
-  default_planner_config: None
+  default_planner_config: RRTstar
   planner_configs:
     - SBL
     - EST
@@ -309,7 +309,7 @@ robot2:
   projection_evaluator: joints(r2_joint_1,r2_joint_2)
   longest_valid_segment_fraction: 0.005
 robot2_gripper:
-  default_planner_config: None
+  default_planner_config: RRTstar
   planner_configs:
     - SBL
     - EST
