@@ -11,15 +11,15 @@
       <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
     </joint>
 
-    <xacro:abb_on_axis prefix="r2_" cart_yaw="${pi/2}"/>
+    <xacro:abb_on_axis prefix="r2_" />
 
     <joint name="r1_world_joint" type="fixed">
       <parent link="world" />
       <child link = "r1_axis" />
-      <origin rpy="0.0 0.0 0" xyz="0.0 3.45 0.02"/>
+      <origin rpy="0.0 0.0 3.14159" xyz="3.70 3.45 0.02"/>
     </joint>
 
-    <xacro:abb_on_axis prefix="r1_" cart_yaw="${-pi/2}"/>
+    <xacro:abb_on_axis prefix="r1_" />
 
   </xacro:macro>
 </robot>

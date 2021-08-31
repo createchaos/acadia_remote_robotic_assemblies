@@ -59,7 +59,7 @@
   <joint name="abb_joint" type="fixed">
     <parent link="cart"/>
     <child link="base_link"/>
-    <origin rpy="0 0 0" xyz="0 0 0 "/>
+    <origin rpy="0 0 1.5707963267948966 " xyz="0 0 0 "/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
   <!-- link list -->

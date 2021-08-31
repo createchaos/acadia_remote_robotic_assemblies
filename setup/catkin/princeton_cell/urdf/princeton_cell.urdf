@@ -65,7 +65,7 @@
   <joint name="r2_abb_joint" type="fixed">
     <parent link="r2_cart"/>
     <child link="r2_base_link"/>
-    <origin rpy="0 0 1.5707963267948966" xyz="0 0 0 "/>
+    <origin rpy="0 0 1.5707963267948966 " xyz="0 0 0 "/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
   <!-- link list -->
@@ -305,7 +305,7 @@
   <joint name="r1_world_joint" type="fixed">
     <parent link="world"/>
     <child link="r1_axis"/>
-    <origin rpy="0.0 0.0 0" xyz="0.0 3.45 0.02"/>
+    <origin rpy="0.0 0.0 3.14159" xyz="3.70 3.45 0.02"/>
   </joint>
   <!-- Conversion were obtained from http://www.e-paint.co.uk/Lab_values.asp
        unless otherwise stated. -->
@@ -362,7 +362,7 @@
   <joint name="r1_abb_joint" type="fixed">
     <parent link="r1_cart"/>
     <child link="r1_base_link"/>
-    <origin rpy="0 0 -1.5707963267948966" xyz="0 0 0 "/>
+    <origin rpy="0 0 1.5707963267948966 " xyz="0 0 0 "/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
   <!-- link list -->

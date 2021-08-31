@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
-  <xacro:macro name="abb_on_axis" params="prefix cart_yaw">
+  <xacro:macro name="abb_on_axis" params="prefix">
     <xacro:include filename="$(find abb_resources)/urdf/common_materials.xacro"/>
     <xacro:include filename="$(find abb_irb4600_40_255)/urdf/abb_irb4600_40_255_macro.xacro"/>
     <xacro:include filename="$(find princeton_cell)/urdf/linear_axis.xacro"/>
@@ -11,7 +11,7 @@
     <joint name="${prefix}abb_joint" type="fixed">
       <parent link="${prefix}cart"/>
       <child  link="${prefix}base_link"/>
-      <origin xyz="0 0 0 " rpy="0 0 ${cart_yaw}"/>
+      <origin xyz="0 0 0 " rpy="0 0 ${pi/2} "/>
       <dynamics damping="0.2" friction="0" />
     </joint>
 
