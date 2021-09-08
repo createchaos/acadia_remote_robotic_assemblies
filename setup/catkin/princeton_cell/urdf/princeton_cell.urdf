@@ -39,7 +39,7 @@
     <child link="r2_cart"/>
     <origin rpy="0 0 0 " xyz="0 0 0"/>
     <axis xyz="1 0 0"/>
-    <limit effort="100000" lower="0" upper="4.0" velocity="2.618"/>
+    <limit effort="100000" lower="0" upper="3.9" velocity="2.618"/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
   <link name="r2_cart">
@@ -336,7 +336,7 @@
     <child link="r1_cart"/>
     <origin rpy="0 0 0 " xyz="0 0 0"/>
     <axis xyz="1 0 0"/>
-    <limit effort="100000" lower="0" upper="4.0" velocity="2.618"/>
+    <limit effort="100000" lower="0" upper="3.9" velocity="2.618"/>
     <dynamics damping="0.2" friction="0"/>
   </joint>
   <link name="r1_cart">
