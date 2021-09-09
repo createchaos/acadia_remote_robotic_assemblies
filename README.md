@@ -11,12 +11,12 @@
 * Intro
 * Kinematics
 * Path planning
-* Scene and end effectors
+* Planning Scene
 * Pick and Place
 * Assemblies
 * Robot control
 
-👉 [Slides](https://docs.google.com/presentation/d/12fdKOod3T_OaDoYalJOTHvTI0NZv-UTZKL0OpXUL2Kc/edit?usp=sharing)
+👉 [Slides](https://docs.google.com/presentation/d/1KrtERfzhRXWDradmXg8LIIvlRePG4v0j22Wmoek_Vk4/view)
 
 ## Examples
 
@@ -264,7 +264,7 @@ Also install `python.app` after activating the environment:
 
     Yay! COMPAS is installed correctly!
 
-    COMPAS: 1.7.1
+    COMPAS: 1.8.1
     Python: 3.8.10 | packaged by conda-forge | (default, May 11 2021, 06:25:23) [MSC v.1916 64 bit (AMD64)]
     Extensions: ['compas-fab', 'compas-slicer', 'compas-cgal', 'compas-rrc']
 
