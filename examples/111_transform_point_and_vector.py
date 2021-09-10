@@ -18,5 +18,5 @@ v = Vector(1, 1, 1)
 v.transform(R)
 
 # should not be the same!
-print(repr(p))
-print(repr(v))
+print(p)
+print(v)

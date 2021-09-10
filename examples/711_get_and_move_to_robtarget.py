@@ -20,7 +20,7 @@ if __name__ == '__main__':
     frame, external_axes = abb.send_and_wait(rrc.GetRobtarget())
 
     # Print received values
-    print(repr(frame), external_axes)
+    print(frame, external_axes)
 
     # Change a value of the frame
     frame.point[0] -= 50

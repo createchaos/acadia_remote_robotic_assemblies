@@ -10,4 +10,4 @@ with RosClient('localhost') as client:
     frame_WCF = robot.forward_kinematics(configuration)
 
     print("Frame in the world coordinate system")
-    print(repr(frame_WCF))
+    print(frame_WCF)

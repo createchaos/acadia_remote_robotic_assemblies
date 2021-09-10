@@ -27,6 +27,6 @@ with RosClient('localhost') as client:
     frames_tcf = [Frame((-0.309, -0.046, -0.266), (0.276, 0.926, -0.256), (0.879, -0.136, 0.456))]
     frames_t0cf = robot.from_tcf_to_t0cf(frames_tcf)
 
-    print(repr(frames_t0cf))
+    print(frames_t0cf)
 
     time.sleep(1)

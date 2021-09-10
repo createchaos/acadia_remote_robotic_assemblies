@@ -17,6 +17,6 @@ joint_values = [0.] * 6
 joint_state = dict(zip(joint_names, joint_values))
 
 # Get FK for tip
-print (repr(model.forward_kinematics(joint_state)))
+print (model.forward_kinematics(joint_state))
 # Get FK for base
-print (repr(model.forward_kinematics(joint_state, link_name=model.get_base_link_name())))
+print (model.forward_kinematics(joint_state, link_name=model.get_base_link_name()))

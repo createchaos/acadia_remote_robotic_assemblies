@@ -4022,7 +4022,7 @@ class ConstraintsFromPlane(component):
             tolerance_zaxis = tolerance_zaxis or 1.
 
             frame = coerce_frame(plane)
-            print(repr(frame))
+            print(frame)
             tolerances_axes = [math.radians(tolerance_xaxis), math.radians(tolerance_yaxis), math.radians(tolerance_zaxis)]
             goal_constraints = robot.constraints_from_frame(frame, tolerance_position, tolerances_axes, group)
 

@@ -3513,8 +3513,8 @@ print config</item>
               <chunks count="1">
                 <chunk name="Container">
                   <items count="11">
-                    <item name="CodeInput" type_name="gh_string" type_code="10">print repr(robot.forward_kinematics(config, group='robot1_axis_gripper'))
-print repr(robot.forward_kinematics(config, group='robot2_axis_gripper'))
+                    <item name="CodeInput" type_name="gh_string" type_code="10">print robot.forward_kinematics(config, group='robot1_axis_gripper')
+print robot.forward_kinematics(config, group='robot2_axis_gripper')
 </item>
                     <item name="Description" type_name="gh_string" type_code="10">GhPython provides a Python script component</item>
                     <item name="EditorLocation" type_name="gh_drawing_point" type_code="30">

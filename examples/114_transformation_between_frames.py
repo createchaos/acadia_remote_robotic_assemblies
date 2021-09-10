@@ -12,4 +12,4 @@ P = Point(2, 2, 2)  # local point in F1
 T = Transformation.from_frame_to_frame(F1, F2)
 
 # Transform geometry (=point P) into another coordinate frame
-print(repr(P.transformed(T)))
+print(P.transformed(T))

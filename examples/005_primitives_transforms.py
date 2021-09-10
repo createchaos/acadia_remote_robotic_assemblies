@@ -20,7 +20,7 @@ assert b == [6, 1, 0]
 # in-place transform
 r = Rotation.from_axis_and_angle([0, 0, 1], math.pi)
 a.transform(r)
-assert repr(a) == repr(Point(-1.0, 0.0, 0.0))
+assert str(a) == str(Point(-1.0, 0.0, 0.0))
 
 # rotation from quaternion
 q = Quaternion(0.918958, -0.020197, -0.151477, 0.363544)

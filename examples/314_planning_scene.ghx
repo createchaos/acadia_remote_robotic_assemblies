@@ -1261,7 +1261,7 @@ with RosClient('localhost') as client:
     frames_tcf = [Frame((0.1, 0, 0), (0, 1, 0), (1, 0, 0))]
     frames_t0cf = robot.from_tcf_to_t0cf(frames_tcf)
 
-    print(repr(frames_t0cf))
+    print(frames_t0cf)
 
     time.sleep(1)</item>
                     <item name="Description" type_name="gh_string" type_code="10">GhPython provides a Python script component</item>

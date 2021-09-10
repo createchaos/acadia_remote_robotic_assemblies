@@ -9,7 +9,7 @@ xaxis = Vector(0.68, 0.68, 0.27)
 yaxis = Vector(-0.67, 0.73, -0.15)
 F = Frame(point, xaxis, yaxis)
 
-print(repr(F.quaternion))  # ABB
-print(repr(F.euler_angles(static=False, axes='xyz')))  # Staubli
-print(repr(F.euler_angles(static=False, axes='zyx')))  # KUKA
-print(repr(F.axis_angle_vector))  # UR
+print(F.quaternion)  # ABB
+print(F.euler_angles(static=False, axes='xyz'))  # Staubli
+print(F.euler_angles(static=False, axes='zyx'))  # KUKA
+print(F.axis_angle_vector)  # UR

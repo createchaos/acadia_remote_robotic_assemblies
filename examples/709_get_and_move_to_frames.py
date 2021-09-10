@@ -20,7 +20,7 @@ if __name__ == '__main__':
     frame = abb.send_and_wait(rrc.GetFrame())
 
     # Print received values
-    print(repr(frame))
+    print(frame)
 
     # Change a X axis (in millimiters)
     frame.point[0] -= 50
