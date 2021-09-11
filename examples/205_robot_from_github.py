@@ -16,7 +16,7 @@ urdf = github.load_urdf('irb6640.urdf')
 # Create robot model from URDF
 model = RobotModel.from_urdf_file(urdf)
 
-# Also load geometry
-model.load_geometry(github)
+# Don't load geometry if we're in the command line
+# model.load_geometry(github)
 
 print(model)
