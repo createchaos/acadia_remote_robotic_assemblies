@@ -84,7 +84,7 @@
   * [Transform multiple](examples/112_transform_multiple.py)
   * [Change of basis](examples/113_change_basis_transformation.py)
   * [Transform between frames](examples/114_transformation_between_frames.py)
-  * [Box from world to local in Rhino](examples/115_box_from_the_world_to_local_rhino.py)
+  * [Transform shapes in Rhino](examples/115_transform_shapes_rhino.py)
 
 * Rotation
   * [Construct a rotation](examples/116_several_ways_to_construct_rotation.py)
