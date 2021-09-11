@@ -1681,12 +1681,12 @@ class RobotVisualize(component):
             frames = [draw_frame(f) for f in robot.transformed_frames(configuration, group)]
 
             visual = robot.artist.draw_visual()
-            
+
         scene_key = create_id(self, 'scene')
 
         if robot and (reload_scene or scene_key not in st):
             st[scene_key] = robot.client.get_planning_scene()
-        
+
         scene = st.get(scene_key, None)
 
         if scene:
@@ -1700,23 +1700,23 @@ class RobotVisualize(component):
                     cms = co.to_collision_meshes()
                     # HACK: Restore proper header
                     co.header = header
-                
+
                     for cm in cms:
                         if frame_id != '/base_link':
                             raise Exception('Only world-referenced collision meshes are supported')
-                
+
                         if cm.frame != Frame.worldXY():
                             t = Transformation.from_frame(cm.frame)
                             mesh = cm.mesh.transformed(t)
                         else:
                             mesh = cm.mesh
-                
+
                         rhino_mesh = MeshArtist(mesh).draw()
                         collision_meshes.append(rhino_mesh)
                 st[scene_key_co] = collision_meshes
 
             collision_meshes = st.get(scene_key_co, None)
-            
+
             for aco in scene.robot_state.attached_collision_objects:
                 for acm in aco.to_attached_collision_meshes():
                     frame_id = aco.object['header']['frame_id']
@@ -1728,7 +1728,7 @@ class RobotVisualize(component):
                         t = t * Transformation.from_frame(acm.collision_mesh.frame)
 
                     mesh = acm.collision_mesh.mesh.transformed(t)
-            
+
                     rhino_mesh = MeshArtist(mesh).draw()
                     attached_collision_meshes.append(rhino_mesh)
 
@@ -2911,7 +2911,7 @@ if check:
     configs = []
     for frame in planes_at_t0cf:
         configs.append(robot.inverse_kinematics(frame))
-    
+
     st[key] = configs
 
 configs = st.get(key)
@@ -2978,7 +2978,7 @@ if execute:
     # Vacuum off
     abb.send_and_wait(rrc.SetDigital('doUnitC106Out2',0), timeout=10)
     time.sleep(1)
-    
+
     # Move over place position
     abb.send(rrc.MoveToFrame(approach_place_frame, speed, rrc.Zone.Z10))
 </item>
@@ -3947,7 +3947,7 @@ COMPAS FAB v0.18.0</item>
                                       <items count="3">
                                         <item name="TypeName" type_name="gh_string" type_code="10">Grasshopper.Kernel.Types.GH_String</item>
                                         <item name="null_string" type_name="gh_bool" type_code="1">false</item>
-                                        <item name="string" type_name="gh_string" type_code="10">ros-vzby-dzht.yaler.io</item>
+                                        <item name="string" type_name="gh_string" type_code="10">CHANGE-TO-ROS-URL</item>
                                       </items>
                                     </chunk>
                                   </chunks>

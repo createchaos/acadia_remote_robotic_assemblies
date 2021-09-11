@@ -6,7 +6,7 @@ from compas.geometry import Vector
 if __name__ == '__main__':
 
     # Create Ros Client
-    ros = rrc.RosClient('ros-vzby-dzht.yaler.io', port=80)
+    ros = rrc.RosClient('ros-79hh-s4fg.yaler.io', port=80)
     ros.run()
 
     # Create ABB Client
