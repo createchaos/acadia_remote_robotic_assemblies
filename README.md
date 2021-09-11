@@ -175,10 +175,6 @@
 * Assembly visualization
   * [Grasshopper viewer](examples/620_assembly_viewer.ghx)
 
-* Assembly Design for tomorrow!
-  * [Assembly designs](examples/621_assembly_designs.ghx)
-
-
 ### Robot Control with COMPAS RRC
 
 * Communication
