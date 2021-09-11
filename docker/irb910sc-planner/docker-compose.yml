@@ -14,7 +14,7 @@ services:
       - roslaunch
       - /root/catkin_ws/scripts/main.launch
       - robot_ip:=host.docker.internal
-      - rrc:=false
+      - rrc:=true
       - gui:=false
     volumes:
       - ./scripts:/root/catkin_ws/scripts
