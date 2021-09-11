@@ -233,7 +233,7 @@ First time using `conda`? Make sure you run this at least once:
 
 Clone this repository and create a new conda environment:
 
-    (base) cd path/to/workshop_acadia_2021
+    (base) cd path/to/acadia_remote_robotic_assemblies
     (base) conda env create -f environment.yml
     (base) conda activate acadia21
 
