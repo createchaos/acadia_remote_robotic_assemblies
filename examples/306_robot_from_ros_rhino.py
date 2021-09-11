@@ -13,4 +13,4 @@ with RosClient('localhost') as ros:
     robot.artist = RobotModelArtist(robot.model, layer='COMPAS::Robot Viz')
 
 robot.artist.clear_layer()
-robot.artist.draw()
+robot.artist.draw_visual()
