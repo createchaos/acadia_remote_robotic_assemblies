@@ -1,0 +1,89 @@
+#
+# Generated backup file, do not edit.
+#
+# Originally at: /hd0a/TEMP/backup.290568
+# 2021-06-23  02:17:55
+#
+>>SYSTEM_ID:
+4600-503199
+
+>>PRODUCTS_ID:
+RobotWare Version: 6.06.00.00
+TrackMotion Version: 6.06.00.00
+
+  RobotWare Base
+  English
+  709-1 DeviceNet Master/Slave
+  841-1 EtherNet/IP Scanner/Adapter
+  687-1 Advanced Robot Motion
+  604-1 MultiMove Coordinated
+  608-1 World Zones
+  610-1 Independent Axis
+  611-1 Path Recovery
+  612-1 Path Offset
+  885-1 SoftMove
+  613-1 Collision Detection
+  614-1 FTP and NFS client
+  616-1 PC Interface
+  617-1 FlexPendant Interface
+  623-1 Multitasking
+  628-1 Sensor Interface
+  Axis Calibration
+  IRB 4600-40/2.55 Type C
+  Drive System IRB 460/640/660/760/4600/66xx/6700
+  ADU-790A in position X3
+  Axis Calibration
+  IRB 4600-40/2.55 Type C
+  Drive System IRB 460/640/660/760/4600/66xx/6700
+  ADU-790A in position X3
+  Track Motion x004 Base
+  Track Motion x004 Base
+  IRBT 4004 Type A 3.9 m
+  Standard carriage In line
+  IRBT 4004 Type A 3.9 m
+  Standard carriage In line
+
+>>HOME:
+All public files and directories
+
+>>SYSPAR:
+SYS.cfg
+PROC.cfg
+MMC.cfg
+EIO.cfg
+SIO.cfg
+MOC.cfg
+
+
+>>TASK1: (T_ROB1,T_ROB1,)
+SYSMOD/user.sys @ 
+SYSMOD/LINKEDM.sys @ HIDDEN
+PROGMOD/A000_ComRhino.mod @ 
+PROGMOD/A009_Motion_Procs_1.mod @ 
+PROGMOD/A000_Motion_Procs_1.mod @ 
+PROGMOD/A009_Helper_1.mod @ 
+PROGMOD/A009_Motion_1.mod @ 
+
+>>TASK2: (T_ROB2,T_ROB2,)
+PROGMOD/A009_Motion_Procs_2.mod @ 
+PROGMOD/A000_Motion_Procs_2.mod @ 
+PROGMOD/A009_Motion_2.mod @ 
+PROGMOD/A009_Helper_2.mod @ 
+SYSMOD/user.sys @ 
+SYSMOD/LINKEDM.sys @ HIDDEN
+PROGMOD/A000_ComRhino.mod @ 
+
+>>TASK3: (SENDER,,)
+PROGMOD/Sender_Procs.mod @ 
+SYSMOD/user.sys @ 
+PROGMOD/Sender.mod @ 
+PROGMOD/A000_ComRhino.mod @ 
+
+>>TASK4: (RECEIVER,,)
+SYSMOD/user.sys @ 
+PROGMOD/Receiver_Procs.mod @ 
+PROGMOD/Receiver.mod @ 
+PROGMOD/A000_ComRhino.mod @ 
+
+
+>>EOF:
