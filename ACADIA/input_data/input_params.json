@@ -1,7 +1,0 @@
-{
-    "cross_section_dim": 0.03016,
-    "node_diameter": 0.040,
-    "member_dist_from_node": 0.020,
-    "offset_place_close": 0.0,
-    "offset_place_far": 0.42
-}
